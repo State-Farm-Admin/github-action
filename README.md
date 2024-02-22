@@ -46,9 +46,9 @@ jobs:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
           path-to-signatures: 'signatures/version1/cla.json'
-          path-to-document: 'https://github.com/cla-assistant/github-action/blob/master/SAPCLA.md' # e.g. a CLA or a DCO document
+          path-to-document: 'https://github.com/StateFarmIns/.github/blob/master/CONTRIBUTION_LICENSE_AGREEMENT.MD' # e.g. a CLA or a DCO document
           # branch should not be protected
-          branch: 'main'
+          branch: 'master'
           allowlist: user1,bot*
 
          # the followings are the optional inputs - If the optional inputs are not given, then default values will be taken
@@ -59,8 +59,9 @@ jobs:
           #custom-notsigned-prcomment: 'pull request comment with Introductory message to ask new contributors to sign'
           #custom-pr-sign-comment: 'The signature to be committed in order to sign the CLA'
           #custom-allsigned-prcomment: 'pull request comment when all contributors has signed, defaults to **CLA Assistant Lite bot** All Contributors have signed the CLA.'
-          #lock-pullrequest-aftermerge: false - if you don't want this bot to automatically lock the pull request after merging (default - true)
+          lock-pullrequest-aftermerge: true 
           #use-dco-flag: true - If you are using DCO instead of CLA
+
 
 ```
 
